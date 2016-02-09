@@ -1,0 +1,32 @@
+package com.rafaelsousa.models;
+
+public enum Alojamento {
+
+	MASCULINO(1, "MASCULINO"), FEMININO(2, "FEMININO");
+
+	private int id;
+	private final String descricao;
+
+	private Alojamento(int id, String descricao) {
+		this.id = id;
+		this.descricao = descricao;
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public String getDescricao() {
+		return descricao;
+	}
+
+	@Override
+	public String toString() {
+		return String.valueOf(id);
+	}
+	
+}

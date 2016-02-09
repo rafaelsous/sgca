@@ -1,0 +1,38 @@
+*  {
+	margin:0;
+	padding:0;
+}
+ 
+html, body {
+	height:100%;
+}
+ 
+#wrapper {
+	min-height:100%;
+	position:relative;
+}
+
+.footer {
+	position: relative;
+	bottom:0;
+	width:100%;
+	background-color: #0F0F0F;
+	text-align: center;
+	float: left;
+}
+
+#page-wrapper {
+	overflow: hidden;
+}
+
+#page-wrapper h1 {text-align: center;}
+
+.imagePreview{margin-top:10px;}
+
+.imagePreview img {margin:10px;}
+
+.imagePreview img {
+    padding:15px;
+    border:1px dashed #ccc;
+    border-radius: 250px;
+}
