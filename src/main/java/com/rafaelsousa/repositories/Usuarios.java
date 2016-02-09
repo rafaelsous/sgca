@@ -56,9 +56,9 @@ public class Usuarios implements Serializable {
 	}
 	
 	public Usuario carrega(Usuario usuario) throws UnsupportedEncodingException, NoSuchAlgorithmException {
-			return em.createQuery("FROM Usuario u WHERE u.login = :login AND u.senha = :senha", Usuario.class)
+			return em.createQuery("FROM Usuario u WHERE u.login =:login AND u.senha =:senha", Usuario.class)
 					.setParameter("login", usuario.getLogin())
-					.setParameter("senha", criptografaSenha(usuario.getSenha()))
+					.setParameter("senha", usuario.getSenha())
 					.getSingleResult();
 	}
 	

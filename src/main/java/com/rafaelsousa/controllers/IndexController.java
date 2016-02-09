@@ -25,7 +25,7 @@ public class IndexController {
 	
 	@Get("/")
 	public void index() {
-		result.include("mensagem", "VRaptor 4 está rodando!");
+		
 	}
 	
 	@Get("/preview")

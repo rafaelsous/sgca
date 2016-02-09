@@ -4,26 +4,30 @@ public enum TipoUsuario {
 
 	COORDENADOR(1, "Coordenador"),
 	ADMINISTRATIVO(2, "Administrativo"),
-	ASSISTENTE_SOCIAL(1, "Assistente social");
+	ASSISTENTE_SOCIAL(3, "Assistente social");
 	
 	private int id;
-	private final String descricao;
+	private String descricao;
 	
-	private TipoUsuario(int codigo, String descricao) {
-		this.id = codigo;
+	private TipoUsuario(int id, String descricao) {
+		this.id = id;
 		this.descricao = descricao;
 	}
 
-	public int getCodigo() {
+	public int getId() {
 		return id;
 	}
 
-	public void setCodigo(int codigo) {
-		this.id = codigo;
+	public void setId(int id) {
+		this.id = id;
 	}
 
 	public String getDescricao() {
 		return descricao;
+	}
+	
+	public void setDescricao(String descricao) {
+		this.descricao = descricao;
 	}
 	
 	@Override

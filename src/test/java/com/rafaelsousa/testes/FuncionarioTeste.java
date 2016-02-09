@@ -11,6 +11,7 @@ import org.junit.Test;
 
 import com.rafaelsousa.jpa.util.EntityManagerProducer;
 import com.rafaelsousa.models.Funcionario;
+import com.rafaelsousa.models.TipoUsuario;
 import com.rafaelsousa.models.Usuario;
 
 public class FuncionarioTeste {
@@ -43,7 +44,8 @@ public class FuncionarioTeste {
 		usuario.setFuncionario(funcionario);
 		usuario.setLogin(funcionario.getMatricula());
 		usuario.setSenha(funcionario.getCpf());
-		usuario.setAtivo(false);
+		usuario.setTipoUsuario(TipoUsuario.COORDENADOR.getId());
+		usuario.setAtivo(true);
 		
 		funcionario.setUsuario(usuario);
 		
@@ -51,6 +53,8 @@ public class FuncionarioTeste {
 			em.getTransaction().begin();
 			em.merge(funcionario);
 			em.getTransaction().commit();
+			
+			System.out.println("\n\nFuncionário adicionado com sucesso!".toUpperCase());
 			
 		} catch (Exception e) {
 			System.out.println(e.getMessage());

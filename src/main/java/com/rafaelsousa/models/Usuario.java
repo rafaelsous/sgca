@@ -34,6 +34,9 @@ public class Usuario implements Serializable {
 
 	@OneToOne(mappedBy = "usuario")
 	private Funcionario funcionario;
+	
+	@Column(name="id_tipo_usuario", length=1)
+	private int tipoUsuario;
 
 	private boolean ativo;
 
@@ -75,6 +78,14 @@ public class Usuario implements Serializable {
 
 	public void setAtivo(boolean ativo) {
 		this.ativo = ativo;
+	}
+
+	public int getTipoUsuario() {
+		return tipoUsuario;
+	}
+
+	public void setTipoUsuario(int tipoUsuario) {
+		this.tipoUsuario = tipoUsuario;
 	}
 
 	@Override

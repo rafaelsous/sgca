@@ -76,12 +76,13 @@ public class UsuarioController {
 
 		// usuarioWeb.login(carregado);
 
-		result.redirectTo(IndexController.class).index();
+		result.include("usuario", carregado.getFuncionario().getNome().toUpperCase().split(" ")[0] + "!")
+		.redirectTo(IndexController.class).index();
 	}
 
 	@Get("/usuarios")
 	public List<Usuario> lista() {
-		return this.usuarios.todos();
+		return usuarios.todos();
 	}
 
 }
