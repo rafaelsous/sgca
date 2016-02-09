@@ -1,8 +1,10 @@
+SELECT db.sgca FROM
+
 /* CRIANDO TABELA estados */
 CREATE TABLE estados(
-estado_ID tinyint NOT NULL,
-sigla char(2) NOT NULL,
-CONSTRAINT PK_estados PRIMARY KEY (estado_ID)
+	estado_ID tinyint NOT NULL,
+	sigla char(2) NOT NULL,
+	CONSTRAINT PK_estados PRIMARY KEY (estado_ID)
 );
 
 /* CRIANDO TABELA cidades */
